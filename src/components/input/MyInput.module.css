@@ -1,0 +1,56 @@
+.formGroup {
+    position: relative;
+}
+
+input {
+    outline: none;
+    height: 35px;
+    width: 400px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background-color: #F2F9FF;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out; 
+    padding-top: 10px;
+    padding-left: 10px
+    
+}
+
+input:hover {
+    background-color: #EBF6FF; 
+    border: 1px solid #006B6B; 
+}
+
+input:focus {
+    border: 1px solid #006B6B; 
+    background-color: #EBF6FF; 
+}
+
+.label {
+    position: absolute;
+    top: 50%; 
+    left: 10px; 
+    transform: translateY(-50%); 
+    font-size: 15px;
+    color: #cacaca;
+    pointer-events: none; 
+    transition: all 0.3s ease; 
+}
+
+
+input:focus ~ .label,
+input:not(:placeholder-shown) ~ .label
+{   
+    /* left: 10px; */
+    top: 0px;
+    transform: scale(0.9);
+    color: #006B6B;
+}
+
+
+
+input.error ~ .label {
+    border: 1px solid red;
+}
